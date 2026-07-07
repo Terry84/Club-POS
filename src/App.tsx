@@ -55,7 +55,7 @@ interface User {
 }
 
 // API base URL
-const API_BASE = " http://127.0.0.1:5000/api";
+const API_BASE = "club-pos-production.up.railway.app/api";
 
 // Styles (same as previous)
 const styles = {

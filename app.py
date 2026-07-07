@@ -16,7 +16,7 @@ DB_CONFIG = {
     "autocommit": True,
 }
 
-API_ORIGIN = "http://localhost:5173"  # update if frontend runs elsewhere
+API_ORIGIN = "https://club-pos-eta.vercel.app/"  # update if frontend runs elsewhere
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": API_ORIGIN}})
