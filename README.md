@@ -1,69 +1,162 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ # Club POS
 
-Currently, two official plugins are available:
+A modern Point of Sale (POS) system built to help clubs, and bars, inventory, customers, and staff efficiently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User authentication (Login)
+- Sales and billing
+- Product management
+- Inventory tracking
+- Customer management
+- Staff management
+- Order processing
+- Dashboard with business insights
+- Receipt generation
+- Secure backend API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend
+- React
+- TypeScript
+- HTML5
+- CSS3
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Backend
+- Python
+- Flask
+- Flask-CORS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Database
+- SQLite (Development)
+- Easily configurable for PostgreSQL or MySQL
+
+## Project Structure
+
+```
+Club-POS/
+│
+├── backend/
+│   ├── app.py
+│   ├── routes/
+│   ├── models/
+│   ├── database/
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Clone the repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Terry84/Club-POS.git
+cd Club-POS
 ```
+
+### Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+```
+
+Activate the virtual environment.
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Flask server
+
+```bash
+python app.py
+```
+
+The backend will run on:
+
+```
+http://127.0.0.1:5000
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+The frontend will run on:
+
+```
+http://localhost:5173
+```
+
+## API
+
+Example Login Endpoint
+
+```
+POST /api/login
+```
+
+Request
+
+```json
+{
+  "username": "admin",
+  "password": "password"
+}
+```
+
+## Future Improvements
+
+- Barcode scanner support
+- Mpesa payment integration
+- Card payment support
+- Receipt printing
+- Reports and analytics
+- Multi-branch management
+- Employee roles and permissions
+- Cloud deployment
+- Mobile application
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push your branch.
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+**Terry Muthoni Kibugi**
+
+GitHub: https://github.com/Terry84   
