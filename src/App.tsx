@@ -504,6 +504,9 @@ export default function ClubPOSSystem() {
   const handleLogin = async (): Promise<void> => {
     setLoginError("");
     try {
+      console.log("API_BASE:", API_BASE);
+      console.log("Login URL:", `${API_BASE}/login`);
+      
       const res = await fetch(`${API_BASE}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
